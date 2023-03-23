@@ -10,38 +10,38 @@ Source code: https://github.com/YuvalBerkovichCS/TicTacToe
 Try out the game: https://yuvalberkovichcs.github.io/Tic-Tac-Toe-React/
 
 
-ON THIS TUTORIAL
+ON THIS TUTORIAL: 
 
-Overview
+Overview, 
 
-Building the board
+Building the board,
 
-Passing data through props
+Passing data through props, 
 
-Making an interactive component
+Making an interactive component, 
 
-React Developer Tools
+React Developer Tools, 
 
-Completing the game
+Completing the game, 
 
-Lifting state up
+Lifting state up, 
 
-Why immutability is important
+Why immutability is important, 
 
-Taking turns
+Taking turns, 
 
-Declaring a winner
+Declaring a winner, 
 
-Adding time travel
+Adding time travel, 
 
-Storing a history of moves
+Storing a history of moves, 
 
-Lifting state up, again
+Lifting state up, again, 
 
-Showing the past moves
+Showing the past moves, 
 
-Picking a key
+Picking a key, 
 
-Implementing time travel
+Implementing time travel, 
 
-Final cleanup
+Final cleanup, 
