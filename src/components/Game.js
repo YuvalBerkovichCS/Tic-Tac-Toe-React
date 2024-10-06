@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Board from "./Board.js";
+import { ContextHolder } from "@frontegg/react";
+import { AdminPortal } from "@frontegg/react";
 
 function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -7,6 +9,14 @@ function Game() {
   const [sortOrder, setSortOrder] = useState("asc");
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
+  const logout = () => {
+    const baseUrl = ContextHolder.getContext().baseUrl;
+    window.location.href = `${baseUrl}/oauth/logout?post_logout_redirect_uri=${window.location}`;
+  };
+
+  const openAdminPanel = () => {
+    AdminPortal.show();
+  };
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -50,6 +60,8 @@ function Game() {
         <button onClick={handleSortOrderChange}>{sortOrderDescription}</button>
         <ol>{sortOrder === "asc" ? moves : moves.reverse()}</ol>
       </div>
+      <button onClick={openAdminPanel}>Settings</button>
+      <button onClick={logout}>Logout</button>
     </div>
   );
 }
